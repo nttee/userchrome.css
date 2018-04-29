@@ -1,0 +1,94 @@
+/* AUTOHIDE  */
+		#main-window:not([inFullscreen]):not([inDOMFullscreen]):not([customize-entered]):not([chromehidden~="toolbar"]) #navigator-toolbox	{
+					position: relative !important;
+					z-index: 2 !important;
+					}
+		#main-window:not([inFullscreen]):not([inDOMFullscreen]):not([customize-entered]):not([chromehidden~="toolbar"]) #content-deck {
+		/* 			z-index: -1 !important; */
+					position: relative !important;
+					margin-top: -74px !important;
+					}
+		#main-window:not([inFullscreen]):not([inDOMFullscreen]):not([customize-entered]):not([chromehidden~="toolbar"])/*:hover */
+		#navigator-toolbox:not(:focus-within) ~	
+		#content-deck:hover	{ 
+					z-index: 4 !important;
+						}
+		/* AUTOHIDE DRAGFIX */
+		#toolbar-menubar
+		, #TabsToolbar
+		, #titlebar-placeholder
+		, #nav-bar
+		, #PersonalToolbar
+		{ -moz-window-dragging:  no-drag !important; }
+		#main-window:not([inFullscreen]):not([inDOMFullscreen]):not([customize-entered]):not([chromehidden~="toolbar"]):not(:hover) toolbar:not([nowindowdrag="true"]):not([customizing="true"]):not(:hover) 
+			{ -moz-window-dragging: drag !important;}
+		#main-window:not([inFullscreen]):not([inDOMFullscreen]):not([customize-entered]):not([chromehidden~="toolbar"]):hover toolbar:not([nowindowdrag="true"]):not([customizing="true"]):hover 
+			{ -moz-window-dragging: drag !important;}
+
+
+.titlebar-placeholder[type="pre-tabs"] { display: none !important;
+/* 	-moz-window-dragging: drag !important;
+-moz-user-focus:  unset !important;
+-moz-user-select:   unset !important;
+ */
+}
+.titlebar-placeholder[type="post-tabs"] {display: none !important;
+}
+
+/* 		#navigator-toolbox:hover	
+		 { -moz-window-dragging:  drag !important; }
+ */
+/***AUTOHIDE CAPTION BUTTON FIX***/
+		.titlebar-button {
+			border: none;
+			margin: 0 !important;
+			padding: 0px 17px !important;
+			}
+		#titlebar-buttonbox {
+			position: relative !important; z-index: 3 !important;
+			}	
+		#titlebar-buttonbox:hover {
+			background-color: black !important;
+			}
+		#titlebar-buttonbox {
+			margin: 0px 0px 0px 0px !important;
+			padding: 0px 0px !important;
+			/* max-height: 20px !important; */
+			/* max-height: var(tab-min-height) !important; */
+			}
+		#titlebar-buttonbox:not(:hover) #titlebar-min {
+				visibility: collapse !important;
+			}
+		#titlebar-buttonbox #titlebar-max{
+				visibility: collapse !important;
+			}
+		#PanelUI-menu-button {
+			padding-inline-start: 0px !important;
+			padding-inline-end: 2px !important;
+			}
+		#PanelUI-button {
+			border: none !important;
+			}
+/*** FIX CAPTION WIN10***/
+		#main-window[sizemode="normal"] > #titlebar { -moz-appearance: none !important; }
+
+
+/***NAV TOOLBOX HOVER SPACE***/
+		
+		#navigator-toolbox {
+			box-shadow: 0 0px 8px 0 rgba(12, 12, 13, 0.4), 0 0px 20px 0 rgba(0, 0, 0, 0.19) !important;
+			/* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19) !important;} */
+			}
+
+		#navigator-toolbox:after	{
+			content: "";
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			right: 0px;
+			top: 0px;
+			background: transparent;
+			/* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19) !important;} */
+			z-index: -1;
+			border-bottom: 8px solid transparent !important;
+			}
