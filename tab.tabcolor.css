@@ -1,0 +1,19 @@
+/* tab color */
+tab:not([selected])[pending] .tab-background 
+{
+	border-top: 2px hsla(240,5%,5%,.5) solid !important;
+	/* border:none !important;} */
+	/* background-color: hsla(240,5%,5%,.5) !important; */
+}
+tab:not([selected])[unread] .tab-background 
+{
+	border-top: 2px orange solid  !important;
+}
+tab:not([selected])[progress] .tab-background 
+{
+	border-top: 2px red solid  !important;
+}
+tab:not([selected]):not([unread]):not([pending]):not([busy]) .tab-background 
+{ 
+	border-top: 2px limegreen solid !important; 
+}

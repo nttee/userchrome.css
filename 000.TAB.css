@@ -1,0 +1,83 @@
+/* tab separator */
+.tabbrowser-tab::after, .tabbrowser-tab::before {
+    display: none !important;
+/* 	border-left: none !important;; */
+/*     margin-top: 5px; */
+/*     margin-bottom: 4px; */
+    opacity: 0.9;
+}
+
+
+
+
+/* TABSTYLE */
+			#tabbrowser-tabs, #tabbrowser-tabs *, .tabbrowser-tab, .tabbrowser-tab *, .tab-background {
+				transition: none !important;
+			}
+
+			#tabbrowser-tabs:not([movingtab]) > .tabbrowser-tab[beforeselected-visible]::after, #tabbrowser-tabs[movingtab] > .tabbrowser-tab[visuallyselected]::before, .tabbrowser-tab[visuallyselected]::after {
+				display: none !important;
+			/* 	border-color: transparent; */
+			}
+			.tab-throbber, .tab-throbber-fallback, .tab-icon-image, .tab-sharing-icon-overlay {
+				height: 12px !important;
+				width: 12px !important;
+			}
+
+			.tab-line { display: none !important; }
+
+/***MTHEME TAB***/
+ 
+	/**DEFAULT TABLINE COLOR**/
+		#tabbrowser-tabs {
+		  --tab-line-color: 
+		  /* highlight */
+		  -moz-win-accentcolor
+		  !important;
+		}
+	/**tab border bottom color**/
+		/* tab:not([selected="true"]) .tab-background { */
+			/* border-bottom: 1px -moz-win-accentcolor solid !important; */
+		/* } */
+		
+	/**TABWIDTH**/
+		tab:not([selected="true"]) 	{
+			max-width: 24px !important;
+			min-width: 24px !important;	
+			}
+		tab:not([selected="true"]) .tab-content	{
+			max-width: 24px !important;
+			min-width: 24px !important;	
+			}
+		tab:not([selected="true"]):hover	{
+			max-width: 240px !important;
+			min-width: 240px !important;	
+			}
+		tab:not([selected="true"]):hover .tab-content	{
+			max-width: 240px !important;
+			min-width: 240px !important;	
+			}
+		tab[selected="true"] {
+			max-width: 240px !important;
+			min-width: 240px !important;	
+			}
+	/**FIX MOVING TAB WIDTH**/
+		#tabbrowser-tabs[movingtab] tab, #tabbrowser-tabs[movingtab] .tab-content  {
+			max-width: 24px !important;
+			min-width: 24px !important;	
+			}
+			
+	/**SET TAB HEIGHT**/
+		#titlebar, #tabbrowser-tabs { --tab-min-height: 24px !important;}
+
+	/**FIX TAB CONTENT PADDING FOR SMALL TAB**/
+		.tab-content {    padding: 0 6px !important;}
+		/* .tab-content {    margin-inline-start: 4px !important;} */
+/**HIDE TAB CLOSE BUTTON**/
+		.tabbrowser-tab .tab-close-button {
+			visibility: collapse !important;
+			}
+	/**HIDE OTHER TABBAR BUTTONS**/
+		#alltabs-button, 	.scrollbutton-up, 	.scrollbutton-down 	{ 
+			display: none !important; 
+			}	

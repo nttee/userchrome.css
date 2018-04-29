@@ -1,0 +1,123 @@
+.tab-background[selected="true"] {
+border-top: 2px solid white !important;
+	background: rgba(0, 0, 0, 0.4) !important;
+}
+.tab-background[selected="true"]::before {
+	content: "";	position: absolute;
+	left:-8px;
+	bottom:0px;
+	width: 0px;
+	height: 0px;
+	background:transparent;
+	border-top: 0px solid transparent;
+	border-bottom:8px solid var(--toolbar-bgcolor) ;
+	border-left: 8px solid transparent;
+	border-right: 8px solid transparent;
+}
+.tab-background[selected="true"]::after {
+	content: "";	position: absolute;
+	right:-8px;
+	bottom:0px;
+	width: 0px;
+	height: 0px;
+	background:transparent;
+	border-top: 0px solid transparent;
+	border-bottom:8px solid var(--toolbar-bgcolor) ;
+	border-left: 8px solid transparent;
+	border-right: 8px solid transparent;
+}
+/* .tab-background[selected="true"]::before {
+	content: "";	position: absolute;
+	left:-12px;
+	bottom:0px;
+	width: 0px;
+	height: 0px;
+	background:transparent;
+	border-top: 0px solid transparent;
+	border-bottom:12px solid var(--toolbar-bgcolor) ;
+	border-left: 12px solid transparent;
+	border-right: 12px solid transparent;
+}
+.tab-background[selected="true"]::after {
+	content: "";	position: absolute;
+	right:0px;
+	top:2px;
+	width: 0px;
+	height: 0px;
+	background:transparent;
+	border-bottom: 0px solid transparent;
+	border-top:12px solid var(--toolbar-bgcolor) ;
+	border-left: 12px solid transparent;
+	border-right: 12px solid transparent;
+} */
+/* .tab-background[selected="true"]::before {
+	content: "";	position: absolute;
+	left:-0px;
+	bottom:0px;
+	width: 0px;
+	height: 0px;
+	background:transparent;
+	border-top: 0px solid transparent;
+	border-bottom:8px solid var(--toolbar-bgcolor) ;
+	border-left: 8px solid transparent;
+	border-right: 8px solid transparent;
+} */
+/* .tab-background[selected="true"]::before {
+	content: "";	position: absolute;
+	left:1px;
+	bottom:0px;
+	width: 14px;
+	height: 0px;
+	background:transparent;
+	border-top: 0px solid transparent;
+	border-bottom:20px solid var(--toolbar-bgcolor) ;
+	border-left: 4px solid transparent;
+	border-right: 4px solid transparent;
+} */
+/* .tab-background[selected="true"]::before {
+	content: "";	position: absolute;
+	left:0px;
+	top:0px;
+	width: 18px;
+	height: 0px;
+	background:transparent;
+	border-bottom: 0px solid transparent;
+	border-top:20px solid var(--toolbar-bgcolor) ;
+	border-left: 4px solid transparent;
+	border-right: 4px solid transparent;
+}*/
+/* .tab-background[selected="true"]::after {
+	content: "";
+	position: absolute;
+	display: block;
+	left:0px;
+	top: 2px;
+	width: calc(100% - 8px);
+	height: 0px;
+	background: transparent;
+	border-bottom: 0px solid transparent;
+	border-top:20px solid rgba(0, 0, 0, 0.2) ;
+	border-left: 4px solid transparent;
+	border-right: 4px solid transparent;
+}  */
+	
+tab[visuallyselected="true"] {
+/* 	margin: : 0px 14px 0px 0px !important;
+	position: relative !important; */
+}
+tab[visuallyselected="true"] label {
+	padding: 0px 8px !important;
+	color: white !important;
+}
+
+#TabsToolbar {
+position: relative !important;;
+	z-index: 10 !important;
+
+}
+#PersonalToolbar{background-color: transparent !important; color: white !important;}
+
+#nav-bar {
+/* position: relative !important;
+	z-index: -1 !important; */
+}

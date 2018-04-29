@@ -1,0 +1,9 @@
+/*=============================== URL BAR SEARCHBAR =========================== */
+#urlbar, .searchbar-textbox 
+	{
+		border: none !important;
+		box-shadow: none !important;
+		background-color: transparent !important;
+		color: inherit !important;
+	}
+#identity-box:not(:hover) #identity-icon-labels { visibility: collapse ;}
