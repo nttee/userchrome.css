@@ -1,0 +1,130 @@
+/* theme when NOT lwttheme */
+:root {
+--b1: linear-gradient(23deg, rgba(2,0,36,1) 0%, rgba(255,158,0,0.9976191160057774) 0%, rgba(250,115,11,1) 6%, rgba(231,59,59,1) 14%, rgba(113,20,121,1) 35%, rgba(36,27,163,1) 53%, rgba(33,93,193,1) 67%, rgba(29,176,205,1) 82%, rgba(16,219,231,1) 91%, rgba(12,255,199,1) 100%) ;
+--b1--toolbar-non-lwt-bgcolor: 
+/* 	rgba(255,255,255,.8); */
+	white;
+	/* -moz-dialog; */
+--b1--toolbar-non-lwt-textcolor:   -moz-dialogtext;
+--b1--toolbar-non-lwt-bgimage: none; /* 	  linear-gradient(rgba(255,255,255,.15), rgba(255,255,255,.15)); */
+
+--toolbarbutton-border-radius: 0px !important;
+--toolbarbutton-vertical-text-padding: calc(var(--toolbarbutton-inner-padding) - 1px);
+--panel-separator-color: hsla(210,4%,10%,.14) !important;
+	/* --toolbarbutton-icon-fill-opacity: 1; */
+	/* --panel-separator-color: ThreeDLightShadow; */
+	/* --urlbar-separator-color: ThreeDLightShadow; */
+	/* --toolbox-border-bottom-color: rgba(0,0,0,.3) !important; */
+	/* --toolbox-border-bottom-color: ThreeDShadow; */
+	/*     --toolbar-field-focus-border-color: Highlight; */
+
+--toolbarbutton-outer-padding: 2px !important; /* 2px */
+--toolbarbutton-inner-padding: 6px !important;	/* 6px	 */
+--urlbar-icon-padding: 6px !important;/*     --urlbar-icon-padding: 6px; */
+	
+	
+}
+
+	/* 
+	:root {
+		--toolbarbutton-hover-transition-duration: 150ms;
+		--toolbarbutton-hover-background: var(--lwt-toolbarbutton-hover-background, hsla(0,0%,70%,.4));
+		--toolbarbutton-active-background: var(--lwt-toolbarbutton-active-background, hsla(0,0%,70%,.6));
+		--backbutton-background: hsla(0,100%,100%,.8);
+		--backbutton-hover-background: var(--backbutton-background);
+		--backbutton-active-background: var(--toolbarbutton-active-background);
+		--backbutton-border-color: hsla(240,5%,5%,.3);
+		--toolbarbutton-height: 0;
+	} */
+#main-window:not([chromehidden~="toolbar"]) {
+			min-width: 100px !important;;
+			}
+/* !workaround for lwttheme  */
+		#navigator-toolbox::before { content: ""; position: absolute; width: 100%; height: 100%; z-index: -1 ;}
+
+	/* !workaround #mainwindow */
+		:root:-moz-lwtheme[lwtheme-image] {	background-image: none !important;	}
+
+	/* MAKE THEME COMPATIBLE */
+		:root:-moz-lwtheme #navigator-toolbox::before { color: var(--lwt-text-color) !important; }
+		:root:-moz-lwtheme #navigator-toolbox::before {
+			background-color: var(--lwt-accent-color) !important;
+			background-image: var(--lwt-additional-images) !important;
+			background-position: var(--lwt-background-alignment) !important;
+			background-repeat: var(--lwt-background-tiling) !important;
+			}
+
+		:root:-moz-lwtheme[lwtheme-image] #navigator-toolbox::before {
+			background-image: var(--lwt-header-image), var(--lwt-additional-images) !important;
+			}
+
+		:root:-moz-lwtheme:-moz-window-inactive #navigator-toolbox::before {
+			background-color: var(--lwt-accent-color-inactive, var(--lwt-accent-color)) !important;
+			}
+
+		
+
+		:root[tabsintitlebar]:not(:-moz-lwtheme) #navigator-toolbox::before {
+			background:
+			var(--b1) !important;
+			/* 	hsl(235,33%,19%)  */
+			}
+
+/* workaround for NOTlwttheme */
+		:root {
+			--toolbar-non-lwt-bgcolor: var(--b1--toolbar-non-lwt-bgcolor) !important; 	
+			--toolbar-non-lwt-textcolor: var(--b1--toolbar-non-lwt-textcolor) !important;			
+			--toolbar-non-lwt-bgimage:   var(--b1--toolbar-non-lwt-bgimage) !important; 
+			}
+/* 		#navigator-toolbox > toolbar:not(#toolbar-menubar):not(#TabsToolbar) {
+			background-color: var(--toolbar-bgcolor);
+			background-image: var(--toolbar-bgimage);
+			background-clip: padding-box;
+			color: var(--toolbar-color, inherit);
+			} */
+
+/* MORE THEME */
+		/* We use :-moz-lwtheme-* for toolbarbuttons that aren't inside a toolbar, and
+   [brighttext] to cater for OS themes where :-moz-lwtheme-* doesn't apply. */
+:root:-moz-lwtheme-darktext,
+toolbar:not([brighttext]) {
+  --toolbarbutton-hover-background: var(--lwt-toolbarbutton-hover-background, hsla(240,5%,5%,.1));
+  --toolbarbutton-active-background: var(--lwt-toolbarbutton-active-background, hsla(240,5%,5%,.15));
+}
+
+:root:-moz-lwtheme-brighttext,
+toolbar[brighttext] {
+  --toolbarbutton-hover-background: var(--lwt-toolbarbutton-hover-background, hsla(0,0%,70%,.4));
+  --toolbarbutton-active-background: var(--lwt-toolbarbutton-active-background, hsla(0,0%,70%,.6));
+
+  --backbutton-background: var(--toolbarbutton-hover-background);
+  --backbutton-hover-background: var(--toolbarbutton-active-background);
+  --backbutton-active-background: hsla(0,0%,100%,.4);
+}
+
+
+/* MORE THEME 5750 */
+
+:root:not(:-moz-lwtheme) {
+          background-color: hsl(0, 0%, 78%);
+        }
+
+        @media (-moz-windows-accent-color-in-titlebar: 0) {
+          :root[tabsintitlebar]:not(:-moz-lwtheme) {
+            background-color: hsl(235,33%,19%);
+          }
+          :root[tabsintitlebar] .titlebar-color:not(:-moz-lwtheme) {
+            color: white !important;
+/* 				hsl(240,9%,98%); */
+          }
+        }
+
+        @media (-moz-windows-accent-color-in-titlebar) {
+          :root[tabsintitlebar]:not(:-moz-window-inactive):not(:-moz-lwtheme) {
+            background-color: -moz-win-accentcolor;
+          }
+          :root[tabsintitlebar] .titlebar-color:not(:-moz-window-inactive):not(:-moz-lwtheme) {
+            color: white !important;
+/* 				-moz-win-accentcolortext; */
+          }
+        }
